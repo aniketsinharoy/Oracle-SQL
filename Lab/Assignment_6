@@ -1,0 +1,32 @@
+--------------
+LAB SESSION-3
+-------------
+1.
+UPDATE PRODUCT_MASTER SET Reorderlvl = 80 WHERE Description = 'Shirts';
+
+2.
+UPDATE PRODUCT_MASTER SET SellPrice = SellPrice * 1.01;
+
+3.
+UPDATE SALESMAN_MASTER SET YtdSales = YtdSales + 35 WHERE SalesmanNo = 'S00003';
+
+4.
+UPDATE SALES_ORDER_DETAILS SET QtyDisp = QtyOrdered WHERE ProductRate <= 1000;
+
+5.
+UPDATE CLIENT_MASTER SET Pincode = 400001 WHERE City = 'Mumbai';
+
+6.
+UPDATE PRODUCT_MASTER SET Reorderlvl = 2 * Reorderlvl;
+
+7.
+DELETE FROM SALES_ORDER WHERE OrderStatus = 'cancelled';
+
+8.
+DELETE FROM SALESMAN_MASTER;
+
+9.
+SELECT * FROM PRODUCT_MASTER WHERE QtyInHand < ReorderLvl;
+
+10.
+UPDATE EMP SET MGR = (SELECT EMPNO FROM EMP WHERE ENAME = 'Blake') WHERE ENAME IN ('Smith', 'Adam');
