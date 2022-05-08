@@ -48,4 +48,9 @@ select ename from emp where sal in (select min(sal) from emp group by dept_no);
 
 17.
 select dname from dept where dept_no in (select dept_no from emp group by dept_no having count(ename)>1);
-using join---->>>> select distinct(dname) from dept,emp where dept.dept_no=emp.dept_no;
+
+query using join_
+    |
+    |
+    V
+select distinct(dname) from dept,emp where dept.dept_no=emp.dept_no;
